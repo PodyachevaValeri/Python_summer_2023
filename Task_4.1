@@ -1,0 +1,17 @@
+s = input()
+ns = s.split()
+n = int(ns[0])
+n2 = int(ns[-1])
+for i in ns:
+    if i == '+':
+        a = n + n2
+        print(a)
+    elif i == '-':
+        b = n - n2
+        print(b)
+    elif i == '*':
+        c = n * n2
+        print(c)
+    elif i == '/':
+        d = n / n2
+        print(d)
