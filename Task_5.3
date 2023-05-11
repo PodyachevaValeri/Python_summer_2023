@@ -1,0 +1,11 @@
+n = int(input())
+f1 = 1
+f2 = 1
+print(f1,f2,end = ' ')
+a = 2
+while n > a:
+    sf = f1 + f2
+    f1 = f2
+    f2 = sf
+    print(f2, end=' ')
+    a += 1
