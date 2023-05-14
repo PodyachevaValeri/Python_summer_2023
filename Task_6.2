@@ -1,0 +1,10 @@
+
+print("Вводите строки начиная с пробела!")
+a = input()
+b = input()
+lst1 = a.split(',')
+lst2 = b.split(',')
+books1 = set(lst1)
+books2 = set(lst2)
+books = books1.intersection(books2)
+print(len(books))
