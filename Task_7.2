@@ -1,0 +1,17 @@
+def cesar_cod(letters, n):
+    alph = "abcdefghijklmnopqrstuvwxyz "
+    res = ''
+    for i in letters:
+        pos = alph.find(i)
+        new_pos = pos + n
+        if i in alph:
+            res += alph[new_pos]
+        else:
+            res += i
+    return res
+a = input()
+b = int(input())
+print(f'Код Цезаря: {cesar_cod}')
+
+
+
