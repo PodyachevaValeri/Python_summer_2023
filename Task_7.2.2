@@ -1,0 +1,14 @@
+a= input().split()
+letters = ''.join(a)
+n = int(input())
+alph = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz "
+res = ''
+for i in letters:
+    if i.isalpha():
+        pos = alph.find(i)
+        new_pos = pos + n
+        if i in alph:
+            res += alph[new_pos]
+        else:
+            res += i
+print("Шифр Цезаря: ", res)
