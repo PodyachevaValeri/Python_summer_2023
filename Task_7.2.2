@@ -1,0 +1,12 @@
+letters = input()
+n = int(input())
+alph = "abcdefghijklmnopqrstuvwxyz "
+res = ''
+for i in letters:
+    pos = alph.find(i)
+    new_pos = pos + n
+    if i in alph:
+        res += alph[new_pos]
+    else:
+        res += i
+print("Шифр Цезаря: ", res)
