@@ -6,7 +6,7 @@ res = ''
 for i in letters:
     if i.isalpha():
         pos = alph.find(i)
-        new_pos = pos + n
+        new_pos = pos + (n%26)
         if i in alph:
             res += alph[new_pos]
         else:
