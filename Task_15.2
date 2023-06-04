@@ -1,4 +1,4 @@
 import re
-string = 'A111BC78 А222ВС78 A333BC178 А444ВС178 X666XX178 Х777ХХ178 Х888ХХ78 Ж123BC178 A123BC75 A123BC76'
-regex = r'\b[ABCEHKMOPTXАВСЕНКМОРТХ]\d{3}[ABCEHKMOPTXАВСЕНКМОРТХ]{2}\d*78\b|\b[АВСЕНКМОРТХABCEHKMOPTX]\d{3}[АВСЕНКМОРТХABCEHKMOPTX]{2}\d178\b'
+string = 'A111BC78 А222ВС78 A333BC178 А444ВС178 X666XX178 Х777ХХ178 Х888ХХ78 Ж123BC178 A123BC75 A123BC1235678'
+regex = r'\b[ABCEHKMOPTXАВСЕНКМОРТХ]\d{3}[ABCEHKMOPTXАВСЕНКМОРТХ]{2}\d{,3}78\b'
 print(re.findall(regex, string))
