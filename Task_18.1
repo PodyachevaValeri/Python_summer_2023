@@ -1,0 +1,33 @@
+class Data:
+    def __init__(self, *info):
+        self.info = info
+    def __getitem__(self):
+         return self.info
+class Teacher:
+    def __init__(self):
+        self.hw = 1
+        print(f'Задача отправлена: {self.hw}')
+    def home_work(self, info, *pupil):
+        for i in pupil:
+            i.made(info)
+            self.hw += 1
+            print(f'Задача решена: {self.hw}')
+class Pupil:
+    def __init__(self):
+        self.task = 0
+    def made(self, *task):
+        for i in task:
+            if i > 0:
+                print('Задача решена и отправлена учителю')
+            else:
+                print('Задача не решена')
+
+lesson = Data('class', 'object', 'inheritance')
+marvanna = Teacher()
+vasy = Pupil()
+pety = Pupil()
+marvanna.home_work(1, vasy)
+marvanna.home_work(1, pety)
+print(marvanna.home_work)
+print(vasy.made)
+print(pety.made)
