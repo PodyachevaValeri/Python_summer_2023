@@ -5,8 +5,8 @@ class Data:
          return self.info
 class Teacher:
     def __init__(self):
-        self.hw = 1
-        print(f'Задача отправлена: {self.hw}')
+        self.hw = 0
+        print('Задача отправлена')
     def home_work(self, info, *pupil):
         for i in pupil:
             i.made(info)
@@ -18,6 +18,7 @@ class Pupil:
     def made(self, *task):
         for i in task:
             if i > 0:
+                i += 1
                 print('Задача решена и отправлена учителю')
             else:
                 print('Задача не решена')
@@ -31,3 +32,4 @@ marvanna.home_work(1, pety)
 print(marvanna.home_work)
 print(vasy.made)
 print(pety.made)
+
